@@ -1,0 +1,82 @@
+HTML:-
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Sign up and get 10% off</h1>
+    <p>first order-10% with unique code with our subscribers</p>
+    <div class="container">
+        <div class="circle">
+            <form method="get" action="Thank.html">
+                <br>
+                <input id="in1" type="text" placeholder="Enter First Name"><br>
+
+                <input id="in2" type="text" placeholder="Enter Last Name"><br>
+
+                <input id="in3" type="email" placeholder="Enter Email Address"><br>
+                <input id="in4" type="submit" value="Sign Up me!">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+CSS:-
+
+    body {
+        margin-top: 40px;
+        color: white;
+        text-align: center;
+        background-image: url("https://img.freepik.com/free-photo/arrangement-black-friday-shopping-carts-with-copy-space_23-2148667047.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1704931200&semt=ais");
+        background-repeat: no-repeat;
+        background-size: cover;
+        justify-content: center;
+    }
+    
+    #in1 {
+        text-align: center;
+        margin-bottom: 30px;
+        height: 30px;
+        width: 200px;
+        border: 5px solid purple;
+        border-radius: 15px;
+    }
+    
+    #in2 {
+        text-align: center;
+        margin-bottom: 30px;
+        height: 30px;
+        width: 200px;
+        border: 5px solid green;
+        border-radius: 15px;
+    }
+    
+    #in3 {
+        text-align: center;
+        margin-bottom: 30px;
+        height: 30px;
+        width: 200px;
+        border: 5px solid red;
+        border-radius: 15px;
+    }
+    
+    #in4 {
+        text-align: center;
+        margin-bottom: 30px;
+        height: 30px;
+        width: 150px;
+        border: 5px solid cyan;
+        border-radius: 15px;
+    }

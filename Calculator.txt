@@ -1,0 +1,146 @@
+HTML:-
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>CALCULATOR</h1>
+
+        <input type="text" name="screen" id="screen">
+        <table>
+            <tr>
+                <td><button>(</button></td>
+                <td><button>)</button></td>
+                <td><button>C</button></td>
+                <td><button>←</button></td>
+            </tr>
+            <tr>
+                <td><button>7</button></td>
+                <td><button>8</button></td>
+                <td><button>9</button></td>
+                <td><button>/</button></td>
+            </tr>
+            <tr>
+                <td><button>4</button></td>
+                <td><button>5</button></td>
+                <td><button>6</button></td>
+                <td><button>X</button></td>
+            </tr>
+            <tr>
+                <td><button>1</button></td>
+                <td><button>2</button></td>
+                <td><button>3</button></td>
+                <td><button>-</button></td>
+            </tr>
+            <tr>
+                <td><button>0</button></td>
+                <td><button>.</button></td>
+                <td><button>+</button></td>
+                <td><button>=</button></td>
+            </tr>
+        </table>
+    </div>
+    <script src="calculator.js"></script>
+
+
+</body>
+
+</html>
+
+
+CSS:-
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    margin: 11px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    text-align: center;
+    background: rgb(15, 185, 128);
+    max-width: 400px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    margin: auto;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    /* overflow: hidden; */
+    padding: 10px;
+    background: linear-gradient(to bottom, #83e6cf 0%, #484b49 100%);
+}
+
+button {
+    font-size: 34px;
+    width: 45px;
+    height: 45px;
+    background-color: rgb(28, 22, 194);
+    color: aliceblue;
+    border-radius: 12px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+    color: aliceblue;
+    transition: 0.5s ease-in-out;
+}
+
+input {
+    font-size: 17px;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 11px 7px;
+    margin: auto;
+}
+
+
+JAVASCRIPT:-
+
+
+let screen = document.getElementById('screen');
+buttons = document.querySelectorAll('button');
+let screenValue = '';
+for (item of buttons) {
+    item.addEventListener('click', (e) => {
+        buttonText = e.target.innerText;
+        console.log('Button text is ', buttonText);
+        if (buttonText == 'X') {
+            buttonText = '*';
+            screenValue += buttonText;
+            screen.value = screenValue;
+        } else if (buttonText == 'C') {
+            screenValue = "";
+            screen.value = screenValue;
+        } else if (buttonText == '=') {
+            screen.value = eval(screenValue);
+        } else {
+            screenValue += buttonText;
+            screen.value = screenValue;
+        }
+
+    })
+}
